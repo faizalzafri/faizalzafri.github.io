@@ -1,27 +1,60 @@
 {
-  "total_years": 4,
-  "positions": [
+  "career_start": "2017-09",
+  "companies": [
     {
-      "company": "Your Company",
-      "title": "Software Engineer",
-      "start": "2023-01",
+      "company": "Convera",
+      "start": "2020-12",
       "end": null,
-      "highlights": [
-        "Designed and shipped a REST API serving 1M+ requests/day",
-        "Cut CI build times by 40% by parallelising test suites"
+      "roles": [
+        {
+          "title": "Staff Software Engineer",
+          "start": "2024-06",
+          "end": null,
+          "location": "India"
+        },
+        {
+          "title": "Senior Solutions Engineer",
+          "start": "2022-07",
+          "end": "2024-06",
+          "location": "Pune, India"
+        },
+        {
+          "title": "Associate",
+          "start": "2020-12",
+          "end": "2022-06",
+          "location": "India"
+        }
       ],
-      "stack": ["Java", "Spring Boot", "PostgreSQL", "AWS"]
+      "work": [
+        "Cloud-native adoption and modernization of end-user applications",
+        "Leading database migration initiatives",
+        "Scalable enterprise applications, partner integrations and payment systems"
+      ]
     },
     {
-      "company": "Previous Company",
-      "title": "Associate Software Engineer",
-      "start": "2021-06",
-      "end": "2022-12",
-      "highlights": [
-        "Built internal dashboards used by 200+ employees",
-        "Migrated legacy services to containers"
-      ],
-      "stack": ["Python", "Django", "Docker"]
+      "company": "Cognizant",
+      "start": "2017-09",
+      "end": "2020-11",
+      "roles": [
+        {
+          "title": "Product Specialist",
+          "start": "2019-04",
+          "end": "2020-11",
+          "location": "Pune, India"
+        },
+        {
+          "title": "Junior Product Specialist",
+          "start": "2018-09",
+          "end": "2019-03",
+          "location": "Kolkata, India"
+        },
+        {
+          "title": "Programmer Analyst Trainee",
+          "start": "2017-09",
+          "end": "2018-08",
+          "location": "Kolkata, India"
+        }
+      ]
     }
   ]
 }

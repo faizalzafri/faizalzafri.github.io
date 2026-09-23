@@ -1,8 +1,24 @@
 {
-  "languages": ["Java", "Kotlin", "Python", "TypeScript", "SQL"],
-  "backend": ["Spring Boot", "Node.js", "REST", "gRPC"],
-  "frontend": ["React", "HTML", "CSS"],
-  "data": ["PostgreSQL", "Redis", "Kafka"],
-  "cloud_devops": ["AWS", "Docker", "Kubernetes", "GitHub Actions"],
-  "tools": ["IntelliJ IDEA", "Git", "Postman", "Linux"]
+  "languages": [
+    "Java"
+  ],
+  "frameworks": [
+    "Spring Boot"
+  ],
+  "messaging": [
+    "Apache Kafka"
+  ],
+  "cloud": [
+    "Amazon Web Services (AWS)"
+  ],
+  "practices": [
+    "Technical Design",
+    "Technology Architecture",
+    "Database Migration",
+    "Payment Systems",
+    "Partner Integrations"
+  ],
+  "exploring": [
+    "GenAI"
+  ]
 }

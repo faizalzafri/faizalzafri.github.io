@@ -1,18 +1,16 @@
 {
-  "count": 2,
+  "count": 1,
   "items": [
     {
-      "name": "portfolio-api",
-      "description": "This site: a portfolio disguised as OpenAPI docs. Zero dependencies.",
-      "stack": ["HTML", "CSS", "JavaScript"],
+      "name": "faizalzafri.github.io",
+      "description": "This site: a portfolio presented as interactive API docs. Plain HTML, CSS and JavaScript.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "repo": "https://github.com/faizalzafri/faizalzafri.github.io"
-    },
-    {
-      "name": "project-two",
-      "description": "Short description of something you're proud of.",
-      "stack": ["Java", "Spring Boot"],
-      "repo": "https://github.com/faizalzafri/project-two",
-      "live": null
     }
-  ]
+  ],
+  "more": "https://github.com/faizalzafri"
 }

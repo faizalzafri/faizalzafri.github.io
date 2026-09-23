@@ -1,10 +1,10 @@
 // Endpoint catalogue. To add an endpoint: drop a JSON file in /api and add a line here.
 const ENDPOINTS = [
-  { path: "/api/bio.json",        summary: "Who I am",                 desc: "Returns a short biography, current role and location." },
+  { path: "/api/bio.json",        summary: "Who I am",                 desc: "Returns biography, education, certifications and awards." },
   { path: "/api/experience.json", summary: "Work history",             desc: "Returns professional experience, most recent first." },
   { path: "/api/stack.json",      summary: "Tech stack",               desc: "Returns languages, frameworks and tools I use, grouped by area." },
   { path: "/api/projects.json",   summary: "Selected projects",        desc: "Returns side projects and open-source work with links." },
-  { path: "/api/contact.json",    summary: "How to reach me",          desc: "Returns contact channels. Response time: usually within a day." },
+  { path: "/api/contact.json",    summary: "How to reach me",          desc: "Returns contact channels." },
 ];
 
 const base = new URL(".", location.href);            // works at user.github.io/ and user.github.io/repo/

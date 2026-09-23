@@ -1,12 +1,34 @@
 {
-  "name": "Faiz",
-  "role": "Software Engineer",
-  "location": "India",
-  "summary": "I build reliable backend systems and clean developer tools. Replace this with a two-line pitch about yourself.",
-  "currently": {
-    "company": "Your Company",
-    "focus": ["APIs", "distributed systems", "developer experience"]
+  "name": "Faizal Zafri",
+  "role": "Staff Software Engineer",
+  "company": "Convera",
+  "location": "Pune, India",
+  "summary": "Staff Software Engineer at Convera focused on cloud-native adoption, modernizing end-user applications and leading database migration initiatives. I design and build scalable enterprise applications, partner integrations and payment systems.",
+  "focus": [
+    "Technical Design",
+    "Technology Architecture",
+    "AWS",
+    "GenAI"
+  ],
+  "education": {
+    "degree": "Bachelor of Engineering, Information Technology",
+    "institution": "Rajiv Gandhi Prodyogiki Vishwavidyalaya (RGPV)",
+    "years": "2013-2017"
   },
-  "open_to_work": true,
-  "interests": ["system design", "open source", "investing"]
+  "certifications": [
+    "Oracle Certified Associate, Java SE 7 Programmer",
+    "Apache Kafka for Developers using Spring Boot",
+    "Apache Kafka Series - Learn Apache Kafka for Beginners v2",
+    "Advanced Spring: Application Events"
+  ],
+  "awards": [
+    "Gold Award - Collaboration",
+    "Q1-2021 Flair Award",
+    "Rising Star",
+    "Novice of the Month"
+  ],
+  "languages": [
+    "English (Professional Working)",
+    "Hindi (Native or Bilingual)"
+  ]
 }

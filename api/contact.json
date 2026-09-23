@@ -1,6 +1,7 @@
 {
-  "email": "you@example.com",
+  "email": "zafri_faizal@outlook.com",
+  "linkedin": "https://www.linkedin.com/in/faizalzafri",
   "github": "https://github.com/faizalzafri",
-  "linkedin": "https://www.linkedin.com/in/your-handle",
-  "preferred": "email"
+  "location": "Pune, India",
+  "preferred": "linkedin"
 }
