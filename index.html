@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faiz — Portfolio API</title>
+  <meta name="description" content="Portfolio of Faiz, served as an interactive API reference." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="info">
+      <div class="title-row">
+        <h1>Faiz <span class="muted">/ portfolio-api</span></h1>
+        <span class="badge">v1.0.0</span>
+        <span class="badge badge-oas">OAS 3.1</span>
+      </div>
+      <p class="lead">
+        Software engineer. This page is my portfolio, documented as an API.
+        Expand an endpoint and hit <kbd>Execute</kbd> to fetch real JSON.
+      </p>
+      <div class="server">
+        <span class="label">Server</span>
+        <code id="server-url">https://faizalzafri.github.io</code>
+      </div>
+    </header>
+
+    <section class="tag">
+      <h2>portfolio <span class="muted">Everything you'd want to know before hiring me</span></h2>
+      <div id="ops"></div>
+    </section>
+
+    <footer class="foot">
+      <span>Every endpoint is a static file — try <code>curl</code> on any of them.</span>
+      <span><a href="https://github.com/faizalzafri" rel="noopener">GitHub</a></span>
+    </footer>
+  </main>
+
+  <template id="op-template">
+    <details class="op">
+      <summary>
+        <span class="method">GET</span>
+        <code class="path"></code>
+        <span class="summary"></span>
+        <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4" /></svg>
+      </summary>
+      <div class="op-body">
+        <p class="desc"></p>
+
+        <div class="block-head">
+          <h3>Parameters</h3>
+          <button class="btn btn-exec" type="button">Execute</button>
+        </div>
+        <p class="muted small">No parameters</p>
+
+        <div class="result" hidden>
+          <div class="block-head">
+            <h3>Responses</h3>
+            <button class="btn btn-ghost btn-clear" type="button">Clear</button>
+          </div>
+          <p class="label">Curl</p>
+          <pre class="code curl"></pre>
+          <p class="label">Request URL</p>
+          <pre class="code req-url"></pre>
+          <div class="status-row">
+            <p class="label">Server response</p>
+            <span class="status"></span>
+            <span class="timing muted small"></span>
+          </div>
+          <div class="body-wrap">
+            <button class="btn btn-ghost btn-copy" type="button">Copy</button>
+            <pre class="code json"></pre>
+          </div>
+        </div>
+      </div>
+    </details>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

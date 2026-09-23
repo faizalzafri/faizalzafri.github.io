@@ -1,0 +1,27 @@
+{
+  "total_years": 4,
+  "positions": [
+    {
+      "company": "Your Company",
+      "title": "Software Engineer",
+      "start": "2023-01",
+      "end": null,
+      "highlights": [
+        "Designed and shipped a REST API serving 1M+ requests/day",
+        "Cut CI build times by 40% by parallelising test suites"
+      ],
+      "stack": ["Java", "Spring Boot", "PostgreSQL", "AWS"]
+    },
+    {
+      "company": "Previous Company",
+      "title": "Associate Software Engineer",
+      "start": "2021-06",
+      "end": "2022-12",
+      "highlights": [
+        "Built internal dashboards used by 200+ employees",
+        "Migrated legacy services to containers"
+      ],
+      "stack": ["Python", "Django", "Docker"]
+    }
+  ]
+}

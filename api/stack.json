@@ -1,0 +1,8 @@
+{
+  "languages": ["Java", "Kotlin", "Python", "TypeScript", "SQL"],
+  "backend": ["Spring Boot", "Node.js", "REST", "gRPC"],
+  "frontend": ["React", "HTML", "CSS"],
+  "data": ["PostgreSQL", "Redis", "Kafka"],
+  "cloud_devops": ["AWS", "Docker", "Kubernetes", "GitHub Actions"],
+  "tools": ["IntelliJ IDEA", "Git", "Postman", "Linux"]
+}

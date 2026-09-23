@@ -1,0 +1,12 @@
+{
+  "name": "Faiz",
+  "role": "Software Engineer",
+  "location": "India",
+  "summary": "I build reliable backend systems and clean developer tools. Replace this with a two-line pitch about yourself.",
+  "currently": {
+    "company": "Your Company",
+    "focus": ["APIs", "distributed systems", "developer experience"]
+  },
+  "open_to_work": true,
+  "interests": ["system design", "open source", "investing"]
+}
