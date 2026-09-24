@@ -6,19 +6,23 @@ No build step, no dependencies — just HTML, CSS and JS.
 
 ## Edit your content
 
-Everything lives in `api/`:
+The page is generated in the browser from **`openapi.yaml`** — edit that file to add endpoints, parameters, tags or schemas. No code changes needed.
+
+Response data lives in `api/` as static JSON files:
 
 | Endpoint | File |
 |---|---|
 | `GET /api/bio.json` | `api/bio.json` |
-| `GET /api/experience.json` | `api/experience.json` |
 | `GET /api/stack.json` | `api/stack.json` |
 | `GET /api/projects.json` | `api/projects.json` |
+| `GET /api/experience.json` | `api/experience.json` |
+| `GET /api/experience/{company}.json` | `api/experience/<company>.json` |
 | `GET /api/contact.json` | `api/contact.json` |
 
-Also replace `faizalzafri` in `index.html` (footer GitHub link).
+To add an endpoint: create the JSON file, then describe it under `paths:` in `openapi.yaml`.
+For a path parameter, add one file per allowed value and list the values in the parameter's `enum`.
 
-To add an endpoint, create `api/whatever.json` and add one line to the `ENDPOINTS` array at the top of `app.js`.
+`vendor/js-yaml.min.js` is js-yaml (MIT), bundled so there is no CDN dependency.
 
 ## Preview locally
 

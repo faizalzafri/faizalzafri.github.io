@@ -1,0 +1,30 @@
+{
+  "company": "Convera",
+  "start": "2020-12",
+  "end": null,
+  "roles": [
+    {
+      "title": "Staff Software Engineer",
+      "start": "2024-06",
+      "end": null,
+      "location": "India"
+    },
+    {
+      "title": "Senior Solutions Engineer",
+      "start": "2022-07",
+      "end": "2024-06",
+      "location": "Pune, India"
+    },
+    {
+      "title": "Associate",
+      "start": "2020-12",
+      "end": "2022-06",
+      "location": "India"
+    }
+  ],
+  "work": [
+    "Cloud-native adoption and modernization of end-user applications",
+    "Leading database migration initiatives",
+    "Scalable enterprise applications, partner integrations and payment systems"
+  ]
+}

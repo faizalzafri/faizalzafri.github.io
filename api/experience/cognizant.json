@@ -1,0 +1,25 @@
+{
+  "company": "Cognizant",
+  "start": "2017-09",
+  "end": "2020-11",
+  "roles": [
+    {
+      "title": "Product Specialist",
+      "start": "2019-04",
+      "end": "2020-11",
+      "location": "Pune, India"
+    },
+    {
+      "title": "Junior Product Specialist",
+      "start": "2018-09",
+      "end": "2019-03",
+      "location": "Kolkata, India"
+    },
+    {
+      "title": "Programmer Analyst Trainee",
+      "start": "2017-09",
+      "end": "2018-08",
+      "location": "Kolkata, India"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+openapi: 3.1.0
+info:
+  title: Faizal Zafri
+  version: 2.0.0
+  summary: portfolio-api
+  description: |
+    Staff Software Engineer at Convera. This page is my portfolio, documented as an API.
+    Every endpoint is a static file served by GitHub Pages - expand one and hit **Execute**,
+    or `curl` it from your terminal.
+  contact:
+    name: Faizal Zafri
+    url: https://www.linkedin.com/in/faizalzafri
+  license:
+    name: MIT
+servers:
+  - url: /api
+    description: GitHub Pages (static)
+
+tags:
+  - name: Profile
+    description: Who I am and what I work with
+  - name: Career
+    description: Where I've worked and what I did there
+  - name: Contact
+    description: Ways to reach me
+
+paths:
+  /bio.json:
+    get:
+      tags: [Profile]
+      operationId: getBio
+      summary: Who I am
+      description: Biography, current role, education, certifications and awards.
+      responses:
+        "200":
+          description: Biography
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Bio" }
+
+  /stack.json:
+    get:
+      tags: [Profile]
+      operationId: getStack
+      summary: Tech stack
+      description: Languages, frameworks, platforms and practices, grouped by area.
+      responses:
+        "200":
+          description: Tech stack grouped by category
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Stack" }
+
+  /experience.json:
+    get:
+      tags: [Career]
+      operationId: listExperience
+      summary: Full work history
+      description: Every company and role, most recent first.
+      responses:
+        "200":
+          description: Work history
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Experience" }
+
+  /experience/{company}.json:
+    get:
+      tags: [Career]
+      operationId: getCompany
+      summary: One company
+      description: Roles and work at a single company.
+      parameters:
+        - name: company
+          in: path
+          required: true
+          description: Company slug
+          schema:
+            type: string
+            enum: [convera, cognizant]
+            default: convera
+      responses:
+        "200":
+          description: Company with its roles
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Company" }
+        "404":
+          description: Unknown company
+
+  /projects.json:
+    get:
+      tags: [Profile]
+      operationId: listProjects
+      summary: Selected projects
+      description: Side projects and open-source work with links.
+      responses:
+        "200":
+          description: Projects
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ProjectList" }
+
+  /contact.json:
+    get:
+      tags: [Contact]
+      operationId: getContact
+      summary: How to reach me
+      description: Contact channels and preferred method.
+      responses:
+        "200":
+          description: Contact details
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Contact" }
+
+components:
+  schemas:
+    Bio:
+      type: object
+      required: [name, role, company, location, summary]
+      properties:
+        name: { type: string, example: Faizal Zafri }
+        role: { type: string, example: Staff Software Engineer }
+        company: { type: string, example: Convera }
+        location: { type: string, example: "Pune, India" }
+        summary: { type: string }
+        focus: { type: array, items: { type: string } }
+        education: { $ref: "#/components/schemas/Education" }
+        certifications: { type: array, items: { type: string } }
+        awards: { type: array, items: { type: string } }
+        languages: { type: array, items: { type: string } }
+
+    Education:
+      type: object
+      properties:
+        degree: { type: string }
+        institution: { type: string }
+        years: { type: string, example: 2013-2017 }
+
+    Stack:
+      type: object
+      additionalProperties:
+        type: array
+        items: { type: string }
+
+    Experience:
+      type: object
+      properties:
+        career_start: { type: string, format: year-month, example: 2017-09 }
+        companies:
+          type: array
+          items: { $ref: "#/components/schemas/Company" }
+
+    Company:
+      type: object
+      required: [company, start, roles]
+      properties:
+        company: { type: string, example: Convera }
+        start: { type: string, format: year-month }
+        end: { type: [string, "null"], format: year-month, description: null means current }
+        roles:
+          type: array
+          items: { $ref: "#/components/schemas/Role" }
+        work:
+          type: array
+          items: { type: string }
+
+    Role:
+      type: object
+      required: [title, start]
+      properties:
+        title: { type: string, example: Staff Software Engineer }
+        start: { type: string, format: year-month }
+        end: { type: [string, "null"], format: year-month }
+        location: { type: string }
+
+    ProjectList:
+      type: object
+      properties:
+        count: { type: integer }
+        items:
+          type: array
+          items: { $ref: "#/components/schemas/Project" }
+        more: { type: string, format: uri }
+
+    Project:
+      type: object
+      required: [name, repo]
+      properties:
+        name: { type: string }
+        description: { type: string }
+        stack: { type: array, items: { type: string } }
+        repo: { type: string, format: uri }
+
+    Contact:
+      type: object
+      properties:
+        email: { type: string, format: email }
+        linkedin: { type: string, format: uri }
+        github: { type: string, format: uri }
+        location: { type: string }
+        preferred: { type: string, enum: [email, linkedin, github] }
