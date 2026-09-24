@@ -13,7 +13,7 @@ fetch("openapi.yaml")
   .then((t) => { spec = jsyaml.load(t); render(); })
   .catch(() => {
     document.getElementById("info").innerHTML =
-      `<p class="muted">Could not load openapi.yaml. Preview with <code>python -m http.server 8000</code>.</p>`;
+      `<p class="muted">Could not load the page. Please refresh.</p>`;
   });
 
 function render() {
@@ -36,9 +36,7 @@ function renderInfo() {
     <div class="desc-md">${md(info.description)}</div>
     <div class="server"><span class="label">Servers</span><select id="server">${opts}</select></div>
     <div class="info-links">
-      <a href="openapi.yaml" download>openapi.yaml</a>
       ${info.contact?.url ? `<a href="${esc(info.contact.url)}" rel="noopener">Contact ${esc(info.contact.name || "")}</a>` : ""}
-      ${info.license ? `<span class="muted">License: ${esc(info.license.name)}</span>` : ""}
     </div>`;
 }
 

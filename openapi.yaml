@@ -4,17 +4,14 @@ info:
   version: 2.0.0
   summary: portfolio-api
   description: |
-    Staff Software Engineer at Convera. This page is my portfolio, documented as an API.
-    Every endpoint is a static file served by GitHub Pages - expand one and hit **Execute**,
-    or `curl` it from your terminal.
+    Staff Software Engineer at Convera, based in Pune, India. I focus on cloud-native adoption,
+    modernizing end-user applications and leading database migration initiatives, and I design
+    and build scalable enterprise applications, partner integrations and payment systems.
   contact:
     name: Faizal Zafri
     url: https://www.linkedin.com/in/faizalzafri
-  license:
-    name: MIT
 servers:
   - url: /api
-    description: GitHub Pages (static)
 
 tags:
   - name: Profile
@@ -74,7 +71,7 @@ paths:
         - name: company
           in: path
           required: true
-          description: Company slug
+          description: Company
           schema:
             type: string
             enum: [convera, cognizant]
